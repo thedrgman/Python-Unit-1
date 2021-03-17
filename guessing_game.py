@@ -14,7 +14,8 @@ MIN = 1
 def start_game():
     play = "y"
     highscore = 0
-    while play != "n" or play != "no": # This helps keep the game going until the player inputs no or n, at the moment it is y because they want to play, why else would they be here.
+    while play == "y" or play == "yes": # This helps keep the game going until the player inputs no or n, at the moment it is y because they want to play, why else would they be here.
+        print("play  ", play)
         print("---------------------------------------------------------------")
         print("              Welcome to the Number Guessing Game")
         print("   Just follow the instructions and we'll have a lot of fun")      # Welcoming them to the game and letting them know we will have a lot of fun
@@ -48,6 +49,9 @@ def start_game():
             highscore = attempts
         print("Highscore is: ", highscore)
         play = input("Would you like to play again?   [Y]es or [N]o?  ").lower() # Checks with them if they would like to play again
+    
+    print("Thank you for playing the Number Guessing Game. Have a good day!")
+        
 
         
 def num_guess(num):
